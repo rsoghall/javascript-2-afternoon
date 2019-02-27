@@ -14,7 +14,7 @@
   Then alert your name using dot notation.
 */
 
-var me = {
+let me = {
   name: 'Ryan',
   age: 47
   }
@@ -27,7 +27,7 @@ alert(me.name)
   Have the values to those keys be your favorite thing in that category.
 */
 
-var favoriteThings = {
+let favoriteThings = {
   band: 'U2',
   food: 'Mexican',
   person: 'Julia Roberts',
@@ -42,7 +42,7 @@ var favoriteThings = {
 */
 
 favoriteThings.car = "BMW X5";
-favoriteThings.brand = "Nike";
+favoriteThings.brand = "Oakley";
 
 
 
@@ -65,10 +65,10 @@ favoriteThings.book = 'Harry Potter'
   Using dot notation, add another key (or property) to your backPack object that is named color, with the value being the color of your backpack. 
 */
 
-var backPack = {
+let backPack = {
 
 }
-var item = 'firstPocket';
+let item = 'firstPocket';
 backPack[item]='chapstick';
 backPack.color = 'black';
 
@@ -136,7 +136,9 @@ user2.email='tyler.mcginnis@devmounta.in';
   Create an empty object called methodCollection.
 */
 
-//Code Here
+let methodCollection = {
+
+}
 
 
 
@@ -145,15 +147,20 @@ user2.email='tyler.mcginnis@devmounta.in';
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console. 
 */
 
-//Code Here
-
+methodCollection.alertHello = function(){
+  alert('hello')
+}
+methodCollection.logHello = function(){
+  console.log('hello')
+}
 
 
 /*
   Now call your alertHello and logHello methods.
 */
 
-//Code Here
+methodCollection.alertHello();
+methodCollection.logHello();
 
 
 
@@ -164,7 +171,16 @@ user2.email='tyler.mcginnis@devmounta.in';
   Return a new object with all of the information that you passed in.
 */
 
-//Code Here
+function makePerson(name, birthday, ssn){
+  let object = {
+  }
+  object.name = name;
+  object.birthday = birthday;
+  object.ssn= ssn;
+  return object;
+}
+let newObject = makePerson('Ryan', '1/1', '123456789')
+
 
 
 
@@ -175,6 +191,14 @@ user2.email='tyler.mcginnis@devmounta.in';
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard(cardNumber, expirationDate, securityCode){
+let creditCard = {
+}
+creditCard.cardNumber = cardNumber;
+creditCard.expirationDate = expirationDate;
+creditCard.securityCode = securityCode;
+return creditCard
+}
+let newCard = makeCard()
 
 
